@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+//        var d='cj';
+//        var boxString='';
+//        d = 3
+
+
+       // alert(name);
+       // alert(age);
+       var name='cj',//tab
+            age=30,
+            height;
+        //alert(typeof height);//Undefined类型，值是undefined,类型返回的字符串是undefined
+
+       // alert( height);//Boolean类型，值是true,类型返回的字符串是boolean
+
+        //alert(typeof name);//String类型，值是cj,类型返回的字符串是string
+        //alert(typeof 30);//Number类型，值是30,类型返回的字符串是number
+
+   //空的对象，表示这个对象创建了，里面没有东西；空对象，表示没有创建，为null
+      /*  var box={}; var box=new Object();
+        alert(typeof  box); //Object类型，值是[object Object],类型返回的字符串是object*/
+
+//Null类型派生自Object类型
+           // var box=null;
+           // alert(typeof box); //Null类型，值是[null],类型返回的字符串是object
+      /* function box() {
+
+       }*/
+        //alert(typeof box);//Function函数，值是function box(){},类型返回的字符串是object
+      // alert(typeof true);//可以直接使用字面量，变量
+
+        //函数在ECMAScript是对象，不是一种数据类型，typeof是操作符而非内置函数。可以使用typeof 来区分function 和 object
+        //undefined引入为了区分空对象和未初始化的变量
+
+        //不存在变量和未初始化的变量是不一样的，ps：感觉变成哲学问题了
+
+      /*  var box;
+        alert(typeof box);
+        alert(typeof width);//浏览器报错，is not defined*/
+
+     /* var box={};//var box=null;还没有创建对象，但先声明了对象引用而必须初始化的结果。先声明一个对象放在那边，默认初始化为null，初始化用
+      if (box!=null){
+          alert("对象已经创建成功！");
+      }*/
+   /*
+    var box;
+        box = {
+            a:1
+        };
+        alert(typeof box);*/
+          /* var box=null;
+           var box='';
+           var box=0;
+           var box=false;*/
+
+         // alert(undefined==null);//值一样，但类型不一样
+
+        //alert(undefined===null)//未初始化的变量和赋值为null的变量会相等。
+
+    /*    var box;
+        var car=null;
+        alert(box==car);//true
+        alert(typeof box == typeof car);//false
+        alert(box === car);//false*/
+
+         /*   var box=true;
+            alert(box ===1);
+            alert(typeof box == typeof 1)
+        */
+
+/*        var name='';
+        alert(Boolean(name));*/
+       /*     var name='chenjia';
+            if (name)
+            {
+                alert('真');
+            }*/
+      /*  var box;
+        if (box)
+        {
+            alert('真');
+        }
+        else
+        {
+            alert('假');
+        }*/
+      /* 5 数据类型中*/
+
+     /*
+     var num=070;
+      alert(num);
+      var num=0xA;
+      alert(num);
+      var num=0.90;
+      alert(num);
+      var num=8.0;
+      alert(num);
+      var num=4.12e-8;
+      alert(num);
+      alert(0.1+0.2);
+      alert(Number.MIN_VALUE+','+Number.MAX_VALUE);
+      alert(5e-1000);//0;
+      alert(-5e1000);
+      alert(Number.POSITIVE_INFINITY+','+Number.NEGATIVE_INFINITY);
+      var box=100e1000;
+      alert(isFinite(box));
+      var box=0/0;
+      alert(box);
+      var box=12/0*0; Inifinity,NaN
+      var box=12/0*0;
+      alert(Number.NaN);
+      alert(Number.NaN+1);NaN
+      alert(Number.NaN==Number.NaN);false
+      alert(isNaN(25))
+      alert(isNaN('25')); false ,字符串数值，可以转换成数值
+      alert(isNaN('chcj')); true
+      alert(isNaN(true));false，true可以转型为1
+      var box=0/0;
+      alert(isNaN(false));
+      var box={};
+      alert(isNaN(box)); true
+      */
+
+    /*  var box={
+          toString:function () {
+              return 123;
+          }
+
+      };//如果对象的toString方法能够返回数值，那么就不会返回NaN
+      alert(isNaN(box));//false  123
+      */
+
+           /*   var box={
+             toString:function () {
+             return 'chenjia';
+             }
+
+             };//如果对象的toString方法能够返回数值，那么就不会返回NaN
+             alert(isNaN(box));//true*/
+
+
+            /*    var box={
+                    toString:function () {
+                        return '123';
+                    }
+
+                };//如果对象的toString方法能够返回数值，那么就不会返回NaN
+                alert(isNaN(box));//false
+*/
+         /*  alert(Number(true));
+           alert(Number(25));
+           alert(Number(null));
+           alert(Number(undefined));//1 25 0 NaN*/
+/*
+           alert(Number('456'));//456
+           alert(Number(''));//0
+           alert(Number('070'));//双引号,不加为八进制
+           alert(Number('Lee123'));// NaN
+                 alert(Number('123Lee'));//NaN
+ */
+
+           /* var box={
+                toString:function () {
+                    return '112';
+                }
+            }
+            alert(Number(box));//对象
+            alert(parseInt(''));
+            alert(parseInt('chen12chen12'));
+            */
+           // alert(parseInt('070'));
+           // alert(parseInt('1f',16));
+            //  alert(parseInt('00001111',2));
+            //alert(parseInt('70',8));写明8进制时，前缀可去掉
+
+
+                /*
+                 6 数据类型下
+                 */
+                   //alert("Le\te");//看浏览器
+          // alert('\x61');
+           //alert('\u03a3');//unicode
+      /*   var name='chen';
+         name = name+'jia';
+         alert(name);//原字符串销毁，重新创建和引用
+       var box=11;
+       alert(typeof box.toString());
+       var box=true;
+       alert(box.toString());//字符串'true',而不是bool的true
+
+       var box=10;
+       alert(box.toString(2));//'1010'
+       alert(box.toString(8));//'12'
+       alert(box.toString(10));//'10'
+       alert(box.toString(16));//'a'
+       var box=null;//undefined和null不可使用toString();
+       alert(box.toString());
+       var box=null;
+       alert(String(box));//string类型，值为null
+       var box;
+       alert(String(box));//string类型，值为undefined
+       var box={};//对象字面量创建方法
+       var box=new Object();//没有参数可以不用括号，但是不推荐
+
+       var box=new Object(2);//数据和功能的集合
+       //  alert(typeof box);//object类型
+
+       var age=100;
+       alert(box+age);//不同类型可以运算，数据转化在内部进行
+       */
+
+
+    /*   var box=new Number(60);//创建一个数值对象
+          alert(typeof box);//object
+
+            var box=new Object(2);
+            var age=box+100;
+            alert(typeof age);//number
+
+     var box=new Object(2);
+     box =box+100;
+     alert(typeof box);//number
+
+     var box=new Number(60);//创建一个数值对象
+     box = box+1;
+     alert(typeof box);//number,执行计算后都为Number类型
+     var box=new String('cj');
+     alert(box); //Object类型
+     */
+
+      /*
+      7 运算符上
+      一元运算符 布尔运算符 算术运算符 关系运算符 三元运算符 位运算符和赋值运算符，应用于对象时，会
+      会调用对象的valueof()和tostring()方法
+       var box=100;
+       // var age=++box;
+       var age=box++;//没有赋值操作，前置和后置都一样，有赋值操作，后置操作符先赋值后运算
+       alert(age);
+       alert(box)
+      */
+
+        /*  var box='89';
+          box++;//隐含转换
+          alert(typeof box);*/
+
+        /*  var box='ab';
+          box++;
+          alert(box);//值为NaN，type为number，肯定为Num*/
+        /*
+            var box=false;
+            box++;
+            alert(box);//1
+        */
+
+        /*var box={
+
+        };
+        box++;
+        alert(box);//NaN*/
+
+          /*  var box={
+             /!* valueOf:function () {
+                  return 123;
+              }*!/
+             toString:function () {
+                 //return 3;
+                 //return 'abc';//NaN
+                // return '';//1
+                 //return false;//1
+
+             }
+            };
+            box++;
+            alert(box);//NaN
+           var box=100;
+           +box;
+           alert(box);
+           var box='89';
+           +box;
+           // alert(typeof box);//string
+
+           alert(typeof +box);//number 自动转型
+          */
+
+        /*  var box=false;
+          +box;
+          alert(+box);//string,似乎+不改变box自身
+
+          //alert(typeof +box);//number 自动转型*/
+
+     /*   var box={          //不设置toString或valueOf 即为NaN,对象把其它类型包裹了一下
+            toString:function () {
+                return  false;
+            }
+        };
+        alert(+box);//相当于类型转换*/
+
+     /*     var box={
+
+          };
+          alert(+box);//NaN
+
+*/
+       /*     var box=null;
+            alert(+box);//0，看Number转换
+            */
+
+        /*    var box;
+            alert(+box);//NaN*/
+
+      /*  var box=-Infinity+-Infinity;
+        alert(box);*/
+
+   /*      var box=100+'100';//+为字符串连字符
+         alert(box);//100100 type:string
+        */
+         //var box='abc'+10+10;abc1010
+       /*  var box=10+20+'abc'; //30abc,type是 string
+         alert(box);*/
+
+    /*   var age={};
+       alert(Number(age));//NaN*/
+     /*  var box=10+age;//10+{}
+       alert(box);//10[object Object],typeof->string类型*/
+     /*  var box=10+{
+           toString:function () {
+               return 20;
+           }
+           };
+       //alert(box);
+        alert(typeof box);//number*/
+
+       /* var box=10+{
+                toString:function () {
+                    return '20';
+                }
+            };
+        //alert(box);
+        alert(typeof box);//string 1020
+        var box=100-NaN;
+        alert(box);//NaN
+        var box=100-true;
+        alert(box);//99
+        var box=100-'';
+        alert(box);//99
+        var box=100-'';
+        alert(box);//100
+        var box=100-'9';
+        alert(box);//91
+        var box=100-null;
+        alert(box);//100
+        var box=100-对象;//NaN,如果有toString()货或valueOf()则返回100-返回数值的值
+        var box=100-null;
+        alert(box);//100
+
+        var box=10%{
+        toString:function () {
+        return '4';
+        }
+        };
+        alert(box+typeof box);//2,number
+        */
+      /*
+      8 关系运算符中
+      */
+   /*   var box=3>2;
+      alert(box);*/
+            /*var box='3'>22;
+            alert(box); //false,只有一个数值字符串，会将它先转化成数值*/
+
+           /* var box='31'>'5';//第一个字符比较
+            alert(box);
+*/
+           //操作数有一个是对象，则先调用valueOf()或toString()方法
+        /*   var box=2>{};
+           alert(box);//false*/
+         /*   var box=2>{
+                toString:function () {
+                    return 1;
+                }
+                };
+            alert(box);//true*/
+
+        /* var box='a'>'b'; //比较ASCII吗，97,98
+         alert(box);//box*/
+
+       /* var box={}=={};//比较的是地址，每个新创建的对象的引用地址都不同
+        alert(box);*/
+
+     /*  var box={},
+           age=box;
+       alert(age ==box);//true,指向同一个对象*/
+
+       //alert(2=='2');//true;
+        //alert(2==='2');//false
+           //alert(2!=='2');//true
+        //alert(true===1);//false
+    </script>
+</head>
+<body>
+
+</body>
+</html>
